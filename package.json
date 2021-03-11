@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev & node ./listener",
-    "build": "next build & node ./listener",
+    "build": "next build",
     "start": "next start -p $PORT & node ./listener"
   },
   "dependencies": {
