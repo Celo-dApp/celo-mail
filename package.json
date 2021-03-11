@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev & node ./listener",
     "build": "next build & node ./listener",
-    "start": "next start & node ./listener"
+    "start": "next start -p $PORT & node ./listener"
   },
   "dependencies": {
     "aes-js": "^3.1.2",
