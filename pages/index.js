@@ -30,6 +30,7 @@ export default function Home() {
       </Head>
       <div className={styles.header}>
         <Image src="/logo.png" alt="logo" width="50" height="50" />
+        <div>Testnet</div>
       </div>
       <main className={styles.main}>
         <h1 className={styles.title}>Celo Mail</h1>
