@@ -6,7 +6,6 @@ const Joi = require("joi");
 const encrypt = require("../../listener/encrypt");
 
 const schema = Joi.object({
-  name: Joi.string().allow(''),
   amount: Joi.number().min(0).required(),
   address: Joi.string().length(42).required(),
   email: Joi.string().email().allow(''),
@@ -16,11 +15,11 @@ export default async (req, res) => {
   try {
     // validate query
     await schema.validateAsync(req.query);
-    const { name, amount, address, email } = req.query;
+    const { amount, address, email } = req.query;
     // encrypt email. this will be the comment sent
     const comment = encrypt(email);
     // generate uri
-    const uri = `celo://wallet/pay?address=${address}&amount=${amount}&displayName=${name}&comment=${comment}`;
+    const uri = `celo://wallet/pay?address=${address}&amount=${amount}&comment=${comment}`;
     // generate qr
     const qr = await QRCode.toString(uri, { type: "svg" });
     // qr to base64

@@ -11,12 +11,11 @@ export default function Home() {
   const getQr = async (event) => {
     // prevent from refreshing
     event.preventDefault();
-    const name = event.target[0].value;
-    const amount = event.target[1].value;
-    const address = event.target[2].value;
-    const email = event.target[3].value;
-    // /api/qr?address=0x4219f37376A1656303b985D78761C29EEc72caDa&amount=0.001&displayName=asd&email=mail@mail.com
-    const res = await fetch(`/api/qr?name=${name}&amount=${amount}&address=${address}&email=${email}`);
+    const amount = event.target[0].value;
+    const address = event.target[1].value;
+    const email = event.target[2].value;
+    // /api/qr?address=0x4219f37376A1656303b985D78761C29EEc72caDa&amount=0.001&email=mail@mail.com
+    const res = await fetch(`/api/qr?amount=${amount}&address=${address}&email=${email}`);
     const data = await res.json();
     data.error ? setError(data.error) : setError("");
     console.log(data);
@@ -42,10 +41,6 @@ export default function Home() {
         </div>
 
         <form onSubmit={getQr}>
-          <div>
-            <span className={styles.inputName}>Name: </span>
-            <input className={styles.inputValue} placeholder="Coffee"></input>
-          </div>
           <div>
             <span className={styles.inputName}>cUSD: </span>
             <input className={styles.inputValue} placeholder="5"></input>
