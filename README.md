@@ -6,11 +6,29 @@
 
 ![Screen Shot 2021-03-11 at 3 04 51 PM](https://user-images.githubusercontent.com/19412160/110847656-2cd9ed80-827b-11eb-9ccc-73e961434632.png)
 
-Celo Mail is a simple and secure way to recieve email notifications whenever you recieve a payment. Emails are encrypted with Advanced Encryption Standard (AES), a encryption chosen by the U.S. government to protect classified information. The same technology used to encrypt classified information is also used to purchasing a coffee on Celo.
+Celo Mail is a simple and secure way to recieve email notifications whenever you recieve a payment. Emails are encrypted with Advanced Encryption Standard (AES), a encryption chosen by the U.S. government to protect classified information. The same technology used to encrypt classified information is also used to purchase a coffee on Celo.
 
 ## Development
 
-First, run the development server:
+Install
+
+```bash
+yarn
+```
+
+Create `.env` in root with these variables
+
+```
+CUSD_ADDRESS=0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1
+WEB3_SOCKET=wss://alfajores-forno.celo-testnet.org/ws
+AES_KEY=[1, 2, 3]
+EMAIL_HOST=smtp.mail.com
+EMAIL_PORT=587
+EMAIL_USERNAME=sending@email.com
+EMAIL_PASS=super-secure-password
+```
+
+Run the development server:
 
 ```bash
 npm run dev
