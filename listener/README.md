@@ -18,4 +18,4 @@ This listens to transactions and emails when complete.
 
 `email.js` emails user
 
-- email("username@email.com", "mySubjectLine", "myMessageHere")
+- email("username@email.com", "myMessageHere")
