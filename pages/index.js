@@ -66,9 +66,6 @@ export default function Home() {
         <a href="https://github.com/Celo-Mail" target="_blank" className={styles.footerIcons}>
           <Image src="/github.svg" alt="logo" width="25" height="25" />
         </a>
-        <a href="https://www.youtube.com/watch?v=Jm9qSrAxYms" target="_blank" className={styles.footerIcons}>
-          <Image src="/youtube.svg" alt="logo" width="25" height="25" />
-        </a>
       </footer>
     </div>
   );
