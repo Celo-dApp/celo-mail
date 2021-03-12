@@ -6,7 +6,7 @@
 
 ![](https://user-images.githubusercontent.com/19412160/110860210-7da51280-828a-11eb-8d55-6bb2af5bd2f8.png)
 
-Celo Mail is a simple and secure way to recieve email notifications whenever you recieve a payment. Emails are encrypted with Advanced Encryption Standard (AES), a encryption chosen by the U.S. government to protect classified information. The same technology used to encrypt classified information is also used to purchase a coffee on Celo.
+Celo Mail is a simple and secure way to receive email notifications whenever you receive a payment. Emails are encrypted with Advanced Encryption Standard (AES), an encryption chosen by the U.S. government to protect classified information. The same technology used to encrypt classified information is also used to purchase a coffee on Celo.
 
 ## Video Demo
 
