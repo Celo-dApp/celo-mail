@@ -183,6 +183,10 @@
   margin: 2rem;
 }
 
+.footerIcons {
+  margin: 0 10px 0 10px;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
