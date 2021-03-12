@@ -7,7 +7,7 @@ const socketProvider = new Web3.providers.WebsocketProvider(process.env.WEB3_SOC
 const web3Socket = new Web3(socketProvider);
 
 function subscribeToCelo() {
-  console.log("\x1b[33m%s\x1b[0m", "listener.js", "- Listening to celo transactions");
+  console.log("\x1b[33m%s\x1b[0m", "listener.js", `- Listening to celo transactions ${process.env.WEB3_SOCKET}`);
   const pendingTransactions = web3Socket.eth
     .subscribe("logs", { address: process.env.CUSD_ADDRESS }) // listen to cUSD tx
     .on("data", (log) => {
