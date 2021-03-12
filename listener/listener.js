@@ -28,7 +28,7 @@ function subscribeToCelo() {
       // restart when shit goes wrong
       pendingTransactions.unsubscribe();
       setTimeout(() => {
-        console.log("trying again: ", error);
+        console.log("trying again: ", err);
         subscribeToCelo();
       }, 5000);
     });
