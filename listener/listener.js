@@ -6,7 +6,7 @@ const email = require("./email");
 const socketProvider = new Web3.providers.WebsocketProvider(process.env.WEB3_SOCKET);
 const web3Socket = new Web3(socketProvider);
 
-function subscribeToCelo() {
+function listener() {
   console.log("\x1b[33m%s\x1b[0m", "listener.js", `- Listening to celo transactions ${process.env.WEB3_SOCKET}`);
   const pendingTransactions = web3Socket.eth
     .subscribe("logs", { address: process.env.CUSD_ADDRESS }) // listen to cUSD tx
@@ -34,4 +34,4 @@ function subscribeToCelo() {
     });
 }
 
-module.exports = subscribeToCelo;
+module.exports = listener;
